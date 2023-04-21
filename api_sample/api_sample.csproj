@@ -2,12 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.16" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Data\Entity\" />
+    <None Remove="Data\Repository\" />
+    <None Remove="Data\Converter\" />
+    <None Remove="Data\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data\Entity\" />
+    <Folder Include="Data\Repository\" />
+    <Folder Include="Data\Converter\" />
+    <Folder Include="Data\Model\" />
+  </ItemGroup>
 </Project>
